@@ -1,0 +1,94 @@
+---
+import Base from "../layouts/Base.astro";
+import Navigation from "../components/Navigation.astro";
+import SocialLink from "../components/SocialLink.astro";
+import Hero from "../components/Hero.astro";
+import Skills from "../components/Skills.astro";
+import SkillIcon from "../components/SkillIcon.astro";
+import Projects from "../components/Projects.astro";
+import Project from "../components/Project.astro";
+---
+
+<style is:global>
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    vertical-align: middle;
+  }
+
+  ul#JavaScript li::before {
+    content: url(/assets/square-js-brands.svg);
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+
+  ul#React li::before {
+    content: url(/assets/react-brands.svg);
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+
+  ul#Vue li::before {
+    content: url(/assets/vuejs-brands.svg);
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+</style>
+
+<Base>
+  <Navigation title="KUNAL SHARMA">
+    <SocialLink
+      linkTo="Github"
+      link="github.com/iKSM09"
+      linkIcon="fa-brands:github-square"
+    />
+    <SocialLink
+      linkTo="Linkedin"
+      link="linkedin.com/in/iksm09/"
+      linkIcon="fa-brands:linkedin"
+    />
+  </Navigation>
+
+  <Hero />
+
+  <Skills header="Skills I know:">
+    <SkillIcon name="HTML" icon="logos:html-5" />
+    <SkillIcon name="CSS" icon="logos:css-3" />
+    <SkillIcon name="Sass" icon="logos:sass" />
+    <SkillIcon name="Tailwind" icon="logos:tailwindcss-icon" />
+    <SkillIcon name="Bootstrap" icon="logos:bootstrap" />
+    <SkillIcon name="Figma" icon="logos:figma" />
+    <SkillIcon name="JavaScript" icon="logos:javascript" />
+    <SkillIcon name="TypeScript" icon="logos:typescript-icon" />
+    <SkillIcon name="React" icon="logos:react" />
+    <SkillIcon name="Vue" icon="logos:vue" />
+  </Skills>
+
+  <Projects>
+    <Project
+      name="JavaScript Project"
+      description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius numquam nisi repellendus aliquam, odit excepturi cupiditate qui et minima. Repellat delectus voluptatibus beatae quos facilis at vero. Incidunt quaerat cum ipsa nobis autem quasi sequi at, placeat aspernatur officia. Magnam."
+      image="/assets/avatar.svg"
+      techStack="JavaScript"
+      madeWith={["React", "React Router", "React Icons", "Styled Componenets"]}
+    />
+    <Project
+      name="Vue Project"
+      description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius numquam nisi repellendus aliquam, odit excepturi cupiditate qui et minima. Repellat delectus voluptatibus beatae quos facilis at vero. Incidunt quaerat cum ipsa nobis autem quasi sequi at, placeat aspernatur officia. Magnam."
+      image="/assets/avatar.svg"
+      techStack="Vue"
+      madeWith={["React", "React Router", "React Icons", "Styled Componenets"]}
+    />
+    <Project
+      name="React Project"
+      description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius numquam nisi repellendus aliquam, odit excepturi cupiditate qui et minima. Repellat delectus voluptatibus beatae quos facilis at vero. Incidunt quaerat cum ipsa nobis autem quasi sequi at, placeat aspernatur officia. Magnam."
+      image="/assets/avatar.svg"
+      techStack="React"
+      madeWith={["React", "React Router", "React Icons", "Styled Componenets"]}
+    />
+  </Projects>
+</Base>

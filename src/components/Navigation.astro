@@ -1,0 +1,18 @@
+---
+const { title } = Astro.props;
+---
+
+<nav class="mx-auto max-w-screen-lg px-3 py-6">
+  <span class="flex flex-col justify-between items-center md:flex-row gap-y-3">
+    <a href="/">
+      <div
+        class="flex items-center bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-xl font-bold text-transparent"
+      >
+        {title}
+      </div>
+    </a>
+    <ul class="hidden md:flex gap-x-5 font-medium text-gray-200">
+      <slot />
+    </ul>
+  </span>
+</nav>

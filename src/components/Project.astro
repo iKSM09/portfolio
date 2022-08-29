@@ -1,0 +1,64 @@
+---
+const { image, name, description, madeWith, techStack } = Astro.props;
+---
+
+<div class="flex flex-col gap-6 mb-5">
+  <div
+    class="flex flex-col items-center gap-x-8 rounded-md bg-slate-800 p-3 md:flex-row"
+  >
+    <div class="shrink-0 p-4">
+      <a href="/"
+        ><img
+          class="h-full w-full hover:translate-y-1"
+          src={image}
+          alt={name}
+        />
+      </a>
+    </div>
+    <div>
+      <div class="flex flex-col items-center gap-y-2 md:flex-row">
+        <a class="hover:text-cyan-400" href="/">
+          <h3 class="text-xl font-semibold">{name}</h3>
+        </a>
+        <div class="ml-3 flex gap-2">
+          {
+            techStack === "React" && (
+              <span class="rounded-md px-2 py-1 text-xs font-semibold bg-[#61dafb] text-sky-900">
+                React
+              </span>
+            )
+          }
+          {
+            techStack === "Vue" && (
+              <span class="rounded-md px-2 py-1 text-xs font-semibold bg-[#42b883] text-sky-900">
+                Vue
+              </span>
+            )
+          }
+          {
+            techStack === "JavaScript" && (
+              <span class="rounded-md px-2 py-1 text-xs font-semibold bg-[#f0db4f] text-sky-900">
+                JavaScript
+              </span>
+            )
+          }
+        </div>
+      </div>
+      <p class="mt-3 mb-3 text-gray-400">
+        {description}
+      </p>
+      <h4 class="text-lg font-medium mb-3">This project is made with:</h4>
+      <ul
+        id={techStack}
+        class="grid grid-cols-1 gap-3 px-2 mb-2 sm:grid-cols-2 lg:grid-cols-3"
+      >
+        {
+          madeWith.map((data) => (
+            <li class="flex items-center gap-2">{data}</li>
+          ))
+        }
+        <slot />
+      </ul>
+    </div>
+  </div>
+</div>
