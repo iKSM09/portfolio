@@ -4,7 +4,7 @@ import { Icon } from "astro-icon";
 const { link, linkIcon, linkTo } = Astro.props;
 ---
 
-<li class="hover:text-white">
+<span class="hover:text-white">
   <a
     class="flex gap-2 items-center justify-center"
     href={`https://${link}`}
@@ -13,4 +13,4 @@ const { link, linkIcon, linkTo } = Astro.props;
     <Icon class="w-6 h-6" name={linkIcon} />
     <p>{linkTo}</p>
   </a>
-</li>
+</span>
