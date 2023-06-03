@@ -1,44 +1,54 @@
 ---
-const { image, name, description, madeWith, techStack, url } = Astro.props;
+import { Icon } from "astro-icon";
+
+const { image, name, description, madeWith, techStack, url, githubLink } =
+  Astro.props;
+
+function brandColor(techStack: string): string {
+  let color;
+
+  if (techStack === "JavaScript") color = "f0db4f";
+  if (techStack === "TypeScript") color = "007acc";
+  if (techStack === "React") color = "61dafb";
+  if (techStack === "Vue") color = "42b883";
+
+  return `rounded-md px-2 py-1 text-xs font-semibold bg-[#${color}] text-sky-900`;
+}
 ---
 
 <div class="flex flex-col gap-6 mb-5">
   <div
     class="flex flex-col items-center gap-x-8 rounded-md bg-slate-800 p-3 md:flex-row"
   >
-    <div class="shrink-0 p-4">
+    <div class="shrink-0 pb-5 md:p-2">
       <a href={url} target="_blank"
-        ><img class="w-80 h-auto hover:translate-y-1" src={image} alt={name} />
+        ><img
+          class="w-80 h-auto hover:translate-y-1"
+          src={image}
+          alt={`${name} preview image.`}
+        />
       </a>
     </div>
-    <div>
-      <div class="flex flex-col items-center gap-y-2 md:flex-row">
-        <a class="hover:text-cyan-400" href={url} target="_blank">
-          <h3 class="text-xl font-semibold">{name}</h3>
-        </a>
-        <div class="ml-3 flex gap-2">
-          {
-            techStack === "React" && (
-              <span class="rounded-md px-2 py-1 text-xs font-semibold bg-[#61dafb] text-sky-900">
-                React
-              </span>
-            )
-          }
-          {
-            techStack === "Vue" && (
-              <span class="rounded-md px-2 py-1 text-xs font-semibold bg-[#42b883] text-sky-900">
-                Vue
-              </span>
-            )
-          }
-          {
-            techStack === "JavaScript" && (
-              <span class="rounded-md px-2 py-1 text-xs font-semibold bg-[#f0db4f] text-sky-900">
-                JavaScript
-              </span>
-            )
-          }
+    <div class="flex flex-col flex-1 md:mr-3">
+      <div class="flex justify-between">
+        <div class="flex gap-y-2 md:flex-row">
+          <div class="flex gap-2">
+            <span class={brandColor(techStack)}>
+              {techStack}
+            </span>
+          </div>
+          <a class="ml-3 hover:text-cyan-400" href={url} target="_blank">
+            <h3 class="text-xl font-semibold">{name}</h3>
+          </a>
         </div>
+        <a
+          title={`${name} Github Repo`}
+          class="flex gap-2 items-center justify-center"
+          href={`https://github.com/iKSM09/${githubLink}`}
+          target="_blank"
+        >
+          <Icon class="w-6 h-6" name="codicon:github" />
+        </a>
       </div>
       <p class="mt-3 mb-3 text-gray-400">
         {description}
@@ -49,8 +59,16 @@ const { image, name, description, madeWith, techStack, url } = Astro.props;
         class="grid grid-cols-1 gap-3 px-2 mb-2 sm:grid-cols-2 lg:grid-cols-3"
       >
         {
-          madeWith.map((data) => (
-            <li class="flex items-center gap-2">{data}</li>
+          madeWith.map((data: Object) => (
+            <li class="flex items-center gap-2">
+              <a
+                class="hover:text-cyan-400"
+                href={Object.values(data)[0]}
+                target="_blank"
+              >
+                {Object.keys(data)}
+              </a>
+            </li>
           ))
         }
         <slot />

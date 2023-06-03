@@ -27,6 +27,13 @@ import ImgShoppingApp from "../assets/projects/shopping-app.png";
     height: 20px;
   }
 
+  ul#TypeScript li::before {
+    content: url(/assets/square-ts-brands.svg);
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+
   ul#React li::before {
     content: url(/assets/react-brands.svg);
     display: block;
@@ -61,7 +68,7 @@ import ImgShoppingApp from "../assets/projects/shopping-app.png";
     <li>
       <a
         class="bg-slate-600 px-4 py-1 rounded-full hover:text-cyan-400"
-        href="https://drive.google.com/file/d/1CvwglE6eSAdUMv1JOMAQgPRy2lusLjEx/view?usp=sharing"
+        href="https://drive.google.com/file/d/1-81hG8WA2jWnvCmumlp9IX_tjnRpm0Cr/view?usp=sharing"
         target="_blank">Resume</a
       >
     </li>
@@ -70,16 +77,19 @@ import ImgShoppingApp from "../assets/projects/shopping-app.png";
   <Hero />
 
   <Skills header="Skills I know:">
+    <SkillIcon name="Figma" icon="logos:figma" />
     <SkillIcon name="HTML" icon="logos:html-5" />
     <SkillIcon name="CSS" icon="logos:css-3" />
-    <SkillIcon name="Sass" icon="logos:sass" />
+    <SkillIcon name="PostCSS" icon="logos:postcss" />
+    <!-- <SkillIcon name="Sass" icon="logos:sass" /> -->
     <SkillIcon name="Tailwind" icon="logos:tailwindcss-icon" />
-    <SkillIcon name="Bootstrap" icon="logos:bootstrap" />
-    <SkillIcon name="Figma" icon="logos:figma" />
+    <!-- <SkillIcon name="Bootstrap" icon="logos:bootstrap" /> -->
     <SkillIcon name="JavaScript" icon="logos:javascript" />
     <SkillIcon name="TypeScript" icon="logos:typescript-icon" />
     <SkillIcon name="React" icon="logos:react" />
-    <SkillIcon name="Vue" icon="logos:vue" />
+    <SkillIcon name="Next.js" icon="file-icons:nextjs" />
+    <!-- <SkillIcon name="Vue" icon="logos:vue" /> -->
+    <SkillIcon name="Node.js" icon="logos:nodejs-icon" />
   </Skills>
 
   <Projects>
@@ -88,16 +98,28 @@ import ImgShoppingApp from "../assets/projects/shopping-app.png";
       description="A simple note taking app with to-do list made with react."
       image={ImgNotesApp}
       url="https://iksm09-react-notes.netlify.app/"
+      githubLink="react-notes"
       techStack="React"
-      madeWith={["React", "React Router", "React Icons", "Styled Componenets"]}
+      madeWith={[
+        { "React.js": "https://react.dev/" },
+        { "React Router": "https://reactrouter.com/en/main" },
+        { "React Icons": "https://react-icons.github.io/react-icons/" },
+        { "Styled Components": "https://styled-components.com/" },
+      ]}
     />
     <Project
       name="Shopping Website"
       description="A simple shopping cart webpage made with react."
       image={ImgShoppingApp}
       url="https://luxury-clafoutis-302815.netlify.app/"
+      githubLink="crwn-clothing"
       techStack="React"
-      madeWith={["React", "React Router", "React Icons", "Styled Componenets"]}
+      madeWith={[
+        { "React.js": "https://react.dev/" },
+        { "React Router": "https://reactrouter.com/en/main" },
+        { "React Icons": "https://react-icons.github.io/react-icons/" },
+        { "Styled Components": "https://styled-components.com/" },
+      ]}
     />
   </Projects>
 </Base>
