@@ -1,4 +1,6 @@
 ---
+import SocialLink from "./SocialLink.astro";
+
 const { title } = Astro.props;
 ---
 
@@ -12,22 +14,27 @@ const { title } = Astro.props;
       </div>
     </a>
     <ul class="md:flex gap-x-5 font-medium text-gray-200">
-      <slot />
+      <li class="hidden md:block">
+        <SocialLink
+          linkTo="Github"
+          link="github.com/iKSM09"
+          linkIcon="fa-brands:github-square"
+        />
+      </li>
+      <li class="hidden md:block">
+        <SocialLink
+          linkTo="Linkedin"
+          link="linkedin.com/in/iksm09/"
+          linkIcon="fa-brands:linkedin"
+        />
+      </li>
+      <li>
+        <a
+          class="bg-slate-600 px-4 py-1 rounded-full hover:text-cyan-400"
+          href="https://drive.google.com/file/d/1hMSGmdfDY7zZ5OTAV56g_Fl9TJ2wfoay/view?usp=sharing"
+          target="_blank">Resume</a
+        >
+      </li>
     </ul>
   </span>
 </nav>
-
-<!-- <nav class="mx-auto max-w-screen-lg px-3 py-6">
-  <span class="flex flex-col justify-between items-center md:flex-row gap-y-3">
-    <a href="/">
-      <div
-        class="flex items-center bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-xl font-bold text-transparent"
-      >
-        {title}
-      </div>
-    </a>
-    <ul class="hidden md:flex gap-x-5 font-medium text-gray-200">
-      <slot />
-    </ul>
-  </span>
-</nav> -->

@@ -1,7 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
 import Navigation from "../components/Navigation.astro";
-import SocialLink from "../components/SocialLink.astro";
 import Hero from "../components/Hero.astro";
 import Skills from "../components/Skills.astro";
 import SkillIcon from "../components/SkillIcon.astro";
@@ -11,6 +10,7 @@ import Project from "../components/Project.astro";
 import ImgNotesApp from "../assets/projects/notes-app.png";
 import ImgShoppingApp from "../assets/projects/shopping-app.png";
 import ImgYourStyle from "../assets/projects/yourStyle-app.png";
+import SocialLink from "../components/SocialLink.astro";
 ---
 
 <style is:global>
@@ -51,31 +51,39 @@ import ImgYourStyle from "../assets/projects/yourStyle-app.png";
 </style>
 
 <Base>
-  <Navigation title="KUNAL SHARMA">
-    <li class="hidden md:block">
+  <Navigation title="KUNAL SHARMA" />
+
+  <Hero>
+    <h1 class="text-3xl font-bold">
+      Hi there, I'm <span
+        class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent"
+        >Kunal</span
+      > 👋
+    </h1>
+    <p class="mt-5 text-xl leading-8">
+      I am a front-end developer with experience in UI/UX design for both web
+      and mobile. I am proficient in designing, wireframing, and prototyping to
+      developing using HTML, CSS, and JavaScript, and currently pursuing React
+      and TypeScript to add to my skills. I am passionate about creating
+      user-friendly websites and web applications that are easy to use. I have a
+      keen eye for detail and I am always willing to learn new skills and
+      technologies.
+      <a class="text-cyan-400 hover:underline" href="/"></a>
+    </p>
+    <ul class="mt-5 flex gap-x-5 justify-center md:justify-start">
+      <li class="hidden md:block"><p>Connect with me:</p></li>
       <SocialLink
         linkTo="Github"
         link="github.com/iKSM09"
         linkIcon="fa-brands:github-square"
       />
-    </li>
-    <li class="hidden md:block">
       <SocialLink
         linkTo="Linkedin"
         link="linkedin.com/in/iksm09/"
         linkIcon="fa-brands:linkedin"
       />
-    </li>
-    <li>
-      <a
-        class="bg-slate-600 px-4 py-1 rounded-full hover:text-cyan-400"
-        href="https://drive.google.com/file/d/1hMSGmdfDY7zZ5OTAV56g_Fl9TJ2wfoay/view?usp=sharing"
-        target="_blank">Resume</a
-      >
-    </li>
-  </Navigation>
-
-  <Hero />
+    </ul>
+  </Hero>
 
   <Skills header="Skills I know:">
     <SkillIcon name="Figma" icon="logos:figma" />

@@ -1,0 +1,22 @@
+---
+const { name, url, image } = Astro.props;
+---
+
+<a class="relative group" href={url} target="_blank">
+  <img
+    class="absolute inset-0 object-cover rounded-lg w-full h-full group-hover:opacity-30"
+    src={image}
+    alt={`${name} preview image.`}
+  />
+  <div class="relative w-full h-full flex justify-center items-center">
+    <div
+      class="text-center transition-all transform translate-y-8 opacity-0 group-hover:opacity-100 group-hover:translate-y-0"
+    >
+      <p class="font-bold text-lg py-2">{name}</p>
+      <button
+        class="px-6 py-2 text-sm font-bold text-gray-100 bg-slate-700/70 border-2 rounded-full"
+        >Visit</button
+      >
+    </div>
+  </div>
+</a>
