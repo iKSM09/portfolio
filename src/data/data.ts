@@ -29,6 +29,13 @@ export type dgnProject = {
   path: string;
   image: string;
   url: string;
+  problem?: string;
+  solution?: string;
+  results?: string;
+  keyTakeaways?: {
+    summary: string;
+    points: string[];
+  };
 };
 
 export const devProjectList: devProject[] = [
@@ -86,6 +93,24 @@ export const dgnProjectList: dgnProject[] = [
     path: "buzz09",
     image: Buzz09Img,
     url: "https://www.buzz09.com/",
+    problem:
+      "The client, a digital marketing agency, was looking to redesign their website to improve the user experience and increase conversions. The existing website was outdated and cluttered, making it difficult for users to find the information they were looking for. The call to action buttons were also not clear, and users were often confused about what they were supposed to do next.",
+    solution:
+      "The new website design was created with a focus on simplicity and clarity. The homepage was redesigned to feature a clear and concise message about the agency's services. The call to action buttons were also redesigned to be more prominent and inviting. The overall website design was made more user-friendly by using larger fonts, whitespace, and a consistent color scheme.",
+    results:
+      "The new website design was a success. The number of website visitors increased by 19%, and the conversion rate increased by 15%. Users reported that they found the new website easier to use and navigate. They also said that they were more likely to contact the agency after visiting the website.",
+    keyTakeaways: {
+      summary:
+        "This case study demonstrates the importance of UI/UX design in digital marketing. A well-designed website can help to improve the user experience, increase conversions, and boost brand reputation.",
+      points: [
+        "Here are some key takeaways from this case study:",
+        "A well-designed website can help to improve the user experience.",
+        "A clear and concise message on the homepage is essential.",
+        "Prominent and inviting call to action buttons are important.",
+        "A simple and clutter-free design is key.",
+        "Larger fonts, whitespace, and a consistent color scheme can improve the overall user experience.",
+      ],
+    },
   },
   {
     name: "Jetsave",
