@@ -1,11 +1,10 @@
 ---
-import Image from "./Image.astro";
-
-const { name, path, image, url } = Astro.props;
+import ImageSlider from "./ImageSlider";
+const { name, path, images, url } = Astro.props;
 ---
 
 <div class="aspect-square bg-slate-700 rounded-lg hover:translate-y-1">
-  <Image name={name} image={image} url={url} />
+  <ImageSlider client:only="react" name={name} images={images} url={url} />
   <div class="flex justify-between align-middle p-2">
     <h3 class="text-xl font-bold">{name}</h3>
     <a

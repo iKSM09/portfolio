@@ -4,6 +4,7 @@ import Navigation from "../components/Navigation.astro";
 import Hero from "../components/Hero.astro";
 import Projects from "../components/Projects.astro";
 import DgnProject from "../components/DgnProject.astro";
+import ImageSlider from "../components/ImageSlider.jsx";
 
 import resume from "../data/resume.json";
 import { dgnProjectList } from "../data/data";
@@ -47,8 +48,8 @@ import { dgnProjectList } from "../data/data";
       class="container w3-screen grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3"
     >
       {
-        dgnProjectList.map(({ name, path, image, url }) => (
-          <DgnProject name={name} path={path} image={image} url={url} />
+        dgnProjectList.map(({ name, path, images, url }) => (
+          <DgnProject name={name} path={path} images={images} url={url} />
         ))
       }
     </div>

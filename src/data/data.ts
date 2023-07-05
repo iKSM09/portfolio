@@ -6,8 +6,14 @@ import ImgShoppingApp from "../assets/projects/shopping-app.png";
 import ImgYourStyle from "../assets/projects/yourStyle-app.png";
 
 // Dgn Project Images
-import Buzz09Img from "../assets/projects/buzz09_preview-01.png";
-import JetsaveImg from "../assets/projects/jetsave_preview-01.png";
+import Buzz09Img01 from "../assets/projects/buzz09_preview-01.png";
+import Buzz09Img02 from "../assets/projects/buzz09_preview-02.png";
+import Buzz09Img03 from "../assets/projects/buzz09_preview-03.png";
+import Buzz09Img04 from "../assets/projects/buzz09_preview-04.png";
+import JetsaveImg01 from "../assets/projects/jetsave_preview-01.png";
+import JetsaveImg02 from "../assets/projects/jetsave_preview-02.png";
+import JetsaveImg03 from "../assets/projects/jetsave_preview-03.png";
+import JetsaveImg04 from "../assets/projects/jetsave_preview-04.png";
 import BrandnamaImg from "../assets/projects/brandnama_preview-01.png";
 import HarleyImg from "../assets/projects/harley_preview-01.png";
 import HaxarImg from "../assets/projects/haxar_preview-01.png";
@@ -27,7 +33,7 @@ export type devProject = {
 export type dgnProject = {
   name: string;
   path: string;
-  image: string;
+  images: string[];
   url: string;
   problem?: string;
   solution?: string;
@@ -91,7 +97,7 @@ export const dgnProjectList: dgnProject[] = [
   {
     name: "Buzz09",
     path: "buzz09",
-    image: Buzz09Img,
+    images: [Buzz09Img01, Buzz09Img02, Buzz09Img03, Buzz09Img04],
     url: "https://www.buzz09.com/",
     problem:
       "The client, a digital marketing agency, was looking to redesign their website to improve the user experience and increase conversions. The existing website was outdated and cluttered, making it difficult for users to find the information they were looking for. The call to action buttons were also not clear, and users were often confused about what they were supposed to do next.",
@@ -115,25 +121,25 @@ export const dgnProjectList: dgnProject[] = [
   {
     name: "Jetsave",
     path: "jetsave",
-    image: JetsaveImg,
+    images: [JetsaveImg01, JetsaveImg02, JetsaveImg03, JetsaveImg04],
     url: "http://journeys.jetsavetours.in/",
   },
   {
     name: "Brandnama",
     path: "brandnama",
-    image: BrandnamaImg,
+    images: [BrandnamaImg],
     url: "https://www.brandnama.in/",
   },
   {
     name: "Harley Pathlabs",
     path: "harley-pathlabs",
-    image: HarleyImg,
+    images: [HarleyImg],
     url: "http://www.harleypathlabs.com/",
   },
   {
     name: "Haxar Insurance",
     path: "haxar-insurance",
-    image: HaxarImg,
+    images: [HaxarImg],
     url: "https://www.haxarinsurance.com/",
   },
 ];

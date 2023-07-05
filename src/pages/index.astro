@@ -13,6 +13,7 @@ import resume from "../data/resume.json";
 import { devProjectList, dgnProjectList } from "../data/data";
 
 import "../styles/styles.css";
+import ImageSlider from "../components/ImageSlider";
 ---
 
 <Base>
@@ -92,8 +93,8 @@ import "../styles/styles.css";
       class="container w3-screen grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3"
     >
       {
-        dgnProjectList.map(({ name, path, image, url }) => (
-          <DgnProject name={name} path={path} image={image} url={url} />
+        dgnProjectList.map(({ name, path, images, url }) => (
+          <DgnProject name={name} path={path} images={images} url={url} />
         ))
       }
     </div>

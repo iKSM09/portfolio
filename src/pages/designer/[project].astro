@@ -26,7 +26,7 @@ const data = dgnProjectList.filter((proj) => proj.path === project)[0];
     </p>
   </section>
   <section class="mx-auto max-w-screen-lg px-3 py-6">
-    <h1 class="text-center text-4xl font-bold m-4">
+    <h1 class="text-center text-4xl font-bold mb-4">
       <a
         href={data?.url}
         target="_blank"
@@ -35,7 +35,7 @@ const data = dgnProjectList.filter((proj) => proj.path === project)[0];
       </a>
     </h1>
     <div class="aspect-square mx-8">
-      <Image name={data?.name} image={data?.image} url={data?.url} />
+      <Image name={data?.name} image={data?.images[0]} url={data?.url} />
     </div>
     <p class="my-4 text-center">
       <a
