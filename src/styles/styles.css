@@ -1,0 +1,34 @@
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+}
+
+ul#JavaScript li::before {
+  content: url(/assets/square-js-brands.svg);
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+ul#TypeScript li::before {
+  content: url(/assets/square-ts-brands.svg);
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+ul#React li::before {
+  content: url(/assets/react-brands.svg);
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+ul#Vue li::before {
+  content: url(/assets/vuejs-brands.svg);
+  display: block;
+  width: 20px;
+  height: 20px;
+}

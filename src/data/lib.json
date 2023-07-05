@@ -1,0 +1,10 @@
+{
+  "react": { "React.js": "https://react.dev/" },
+  "typescript": { "TypeScript": "https://www.typescriptlang.org/" },
+  "reactRouter": { "React Router": "https://reactrouter.com/en/main" },
+  "reactIcons": { "React Icons": "https://react-icons.github.io/react-icons/" },
+  "styledComponents": { "Styled Components": "https://styled-components.com/" },
+  "tanStackQuery": { "TanStack Query": "https://tanstack.com/query/latest" },
+  "tanStackRouter": { "TanStack Router": "https://tanstack.com/router/v1" },
+  "firebase": { "Firebase": "https://firebase.google.com/" }
+}

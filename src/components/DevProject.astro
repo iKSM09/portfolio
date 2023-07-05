@@ -21,12 +21,14 @@ function brandColor(stack: string): string {
   <div
     class="flex flex-col items-center gap-x-8 rounded-md bg-slate-800 p-3 md:flex-row"
   >
-    <div class="pb-5 md:p-1">
-      <div class="relative block w-80 h-80 aspect-square">
+    <div class="w-full h-full pb-5 md:p-1 sm:w-80 sm:h-80">
+      <div
+        class="relative block w-full h-full aspect-square hover:translate-y-1 sm:w-80 sm:h-80"
+      >
         <Image name={name} image={image} url={url} />
       </div>
     </div>
-    <div class="flex flex-col flex-1 md:mr-3">
+    <div class="flex flex-col flex-1 md:mr-3 w-full">
       <div class="flex justify-between">
         <div class="flex gap-y-2 md:flex-row">
           <div class="flex gap-2">

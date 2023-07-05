@@ -7,10 +7,9 @@ import Skills from "../components/Skills.astro";
 import SkillIcon from "../components/SkillIcon.astro";
 import Projects from "../components/Projects.astro";
 import DevProject from "../components/DevProject.astro";
-import DgnProject from "../components/DgnProject.astro";
 
 import resume from "../data/resume.json";
-import { devProjectList, dgnProjectList } from "../data/data";
+import { devProjectList } from "../data/data";
 
 import "../styles/styles.css";
 ---
@@ -18,7 +17,7 @@ import "../styles/styles.css";
 <Base>
   <Navigation
     title="KUNAL SHARMA"
-    pageUrl="/portfolio"
+    pageUrl="/portfolio/developer"
     resumeUrl={resume.developer}
   />
 
@@ -70,7 +69,7 @@ import "../styles/styles.css";
     <SkillIcon name="Node.js" icon="logos:nodejs-icon" />
   </Skills>
 
-  <Projects name="Dev">
+  <Projects>
     {
       devProjectList.map((project) => (
         <DevProject
@@ -84,18 +83,5 @@ import "../styles/styles.css";
         />
       ))
     }
-  </Projects>
-
-  <Projects name="UI/UX">
-    <div
-      id="img-gallery"
-      class="container w3-screen grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3"
-    >
-      {
-        dgnProjectList.map(({ name, path, image, url }) => (
-          <DgnProject name={name} path={path} image={image} url={url} />
-        ))
-      }
-    </div>
   </Projects>
 </Base>
