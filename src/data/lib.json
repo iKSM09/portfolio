@@ -1,8 +1,10 @@
 {
-  "react": { "React.js": "https://react.dev/" },
+  "tailwind": { "Tailwind CSS": "https://tailwindcss.com/" },
   "typescript": { "TypeScript": "https://www.typescriptlang.org/" },
+  "react": { "React.js": "https://react.dev/" },
   "reactRouter": { "React Router": "https://reactrouter.com/en/main" },
   "reactIcons": { "React Icons": "https://react-icons.github.io/react-icons/" },
+  "lucideIcons": { "Lucide Icons": "https://lucide.dev/" },
   "styledComponents": { "Styled Components": "https://styled-components.com/" },
   "tanStackQuery": { "TanStack Query": "https://tanstack.com/query/latest" },
   "tanStackRouter": { "TanStack Router": "https://tanstack.com/router/v1" },

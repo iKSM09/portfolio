@@ -1,9 +1,10 @@
 import lib from "./lib.json";
 
 // Dev Project Images
-import ImgNotesApp from "../assets/projects/notes-app.png";
-import ImgShoppingApp from "../assets/projects/shopping-app.png";
 import ImgYourStyle from "../assets/projects/yourStyle-app.png";
+import ImgNotesApp from "../assets/projects/notes-app.png";
+import ImgSketchApp from "../assets/projects/mini-sketch-app.png";
+import ImgShoppingApp from "../assets/projects/shopping-app.png";
 
 // Dgn Project Images
 import Buzz09Img01 from "../assets/projects/buzz09_preview-01.png";
@@ -46,34 +47,6 @@ export type dgnProject = {
 
 export const devProjectList: devProject[] = [
   {
-    name: "Notes App",
-    description: "A simple note taking app with to-do list made with react.",
-    image: ImgNotesApp,
-    url: "https://iksm09-react-notes.netlify.app/",
-    githubLink: "react-notes",
-    techStack: "React",
-    madeWith: [
-      lib.react,
-      lib.reactRouter,
-      lib.reactIcons,
-      lib.styledComponents,
-    ],
-  },
-  {
-    name: "Shopping Website",
-    description: "A simple shopping cart webpage made with react.",
-    image: ImgShoppingApp,
-    url: "https://luxury-clafoutis-302815.netlify.app/",
-    githubLink: "crwn-clothing",
-    techStack: "React",
-    madeWith: [
-      lib.react,
-      lib.reactRouter,
-      lib.reactIcons,
-      lib.styledComponents,
-    ],
-  },
-  {
     name: "Your Style App (WIP)",
     description:
       "An experiment to combine an e-commerce website with social media features.",
@@ -89,6 +62,43 @@ export const devProjectList: devProject[] = [
       lib.tanStackQuery,
       lib.tanStackRouter,
       lib.firebase,
+    ],
+  },
+  {
+    name: "Notes App",
+    description: "A simple note taking app with to-do list made with react.",
+    image: ImgNotesApp,
+    url: "https://iksm09-react-notes.netlify.app/",
+    githubLink: "react-notes",
+    techStack: "React",
+    madeWith: [
+      lib.react,
+      lib.reactRouter,
+      lib.reactIcons,
+      lib.styledComponents,
+    ],
+  },
+  {
+    name: "Mini Sketch App",
+    description: "A simple sketch app made with react and canvas API.",
+    image: ImgSketchApp,
+    url: "https://iksm09.github.io/canvas-react/",
+    githubLink: "canvas-react",
+    techStack: "React",
+    madeWith: [lib.react, lib.typescript, lib.tailwind, lib.lucideIcons],
+  },
+  {
+    name: "Shopping Website",
+    description: "A simple shopping cart webpage made with react.",
+    image: ImgShoppingApp,
+    url: "https://luxury-clafoutis-302815.netlify.app/",
+    githubLink: "crwn-clothing",
+    techStack: "React",
+    madeWith: [
+      lib.react,
+      lib.reactRouter,
+      lib.reactIcons,
+      lib.styledComponents,
     ],
   },
 ];
